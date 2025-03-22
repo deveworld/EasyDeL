@@ -18,7 +18,7 @@ import re
 import typing as tp
 import warnings
 from copy import deepcopy
-from dataclasses import field, fields
+from dataclasses import dataclass, field, fields
 from pathlib import Path
 
 import jax
