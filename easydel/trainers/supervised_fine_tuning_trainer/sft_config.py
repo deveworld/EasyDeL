@@ -19,7 +19,7 @@ from easydel.utils.compiling_utils import hash_fn
 
 from ..training_configurations import TrainingArguments
 
-
+@dataclass
 @etr.auto_pytree
 class SFTConfig(TrainingArguments):
 	r"""
