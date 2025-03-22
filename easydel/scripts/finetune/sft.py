@@ -21,7 +21,7 @@ python -m easydel.scripts.sft_finetune \
 """
 
 import typing as tp
-from dataclasses import field
+from dataclasses import dataclass, field
 
 import jax
 from datasets import load_dataset
@@ -31,7 +31,7 @@ from transformers import AutoTokenizer
 import easydel as ed
 from easydel.utils import traversals as etr
 
-
+@dataclass
 @etr.auto_pytree
 class RunTimeConfig:
 	"""
