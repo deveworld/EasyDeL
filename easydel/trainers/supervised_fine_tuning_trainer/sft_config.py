@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import typing as tp
-from dataclasses import field
+from dataclasses import dataclass, field
 
 from easydel.utils import traversals as etr
 from easydel.utils.compiling_utils import hash_fn
