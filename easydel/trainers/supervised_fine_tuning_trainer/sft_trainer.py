@@ -31,6 +31,7 @@ if tp.TYPE_CHECKING:
 	from datasets import Dataset
 else:
 	Dataset = tp.Any
+from dataclasses import Field
 logger = get_logger(__name__)
 
 
@@ -72,7 +73,7 @@ class SFTTrainer(Trainer):
 		self.dataset_num_proc = arguments.dataset_num_proc
 		self.dataset_batch_size = arguments.dataset_batch_size
 		self.arguments = arguments
-		if arguments.dataset_kwargs is None:
+		if arguments.dataset_kwargs is None or type(arguments.dataset_kwargs) is Field::
 			arguments.dataset_kwargs = {}
 		if train_dataset is not None:
 			train_dataset = self._prepare_dataset(
