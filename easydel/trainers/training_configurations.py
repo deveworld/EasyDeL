@@ -73,7 +73,7 @@ def get_safe_arr(xs):
 # Constants
 AVAILABLE_BACKENDS: tp.List[str] = ["cpu", "gpu", "tpu", None]
 
-
+@dataclass
 @etr.auto_pytree
 class TrainingArguments:
 	auto_shard_states: bool = field(
