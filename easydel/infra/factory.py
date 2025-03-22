@@ -157,6 +157,8 @@ class Registry:
 	) -> ModuleRegistration:
 		task_in = self._task_registry.get(task_type, None)
 		assert task_in is not None, f"task type {task_type} is not defined."
+		if model_type == "gemma3":
+			model_type = "gemma3_text"
 		type_in = task_in.get(model_type, None)
 		assert type_in is not None, (
 			f"model type {model_type} is not defined. (upper task {task_type})"
